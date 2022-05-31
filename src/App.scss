@@ -1,5 +1,2 @@
-@use './sassStyles/reset';
-
-header {
-  background-color: red;
-}
+@use './sassStyles/globals/reset';
+@use './sassStyles/header';
