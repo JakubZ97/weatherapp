@@ -1,11 +1,13 @@
 import React from 'react'
-//import '../sassStyles/header'
+import Form from './Form'
 
 function Header() {
   return (
     <header>
-        WEATHER APP
-
+        <h1>
+          WEATHER APP
+        </h1>
+        <Form />
     </header>
   )
 }
