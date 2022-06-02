@@ -1,9 +1,26 @@
+@import 'globals/variables';
+
 form {
+    width: 100%;
+    position: relative;
+
     button {
-        width: 30px;
-        height: 30px;
+        position: absolute;
+        width: $form-font-size-mobile;
+        height: $form-font-size-mobile;
         border: none;
         background: url('../assets/magnifying\ glass_icon.svg');
         background-size: cover;
+        right: 0;
+
+    }
+
+    input {
+        all: unset;
+        position: relative;
+        left: 0;
+        height: $form-font-size-mobile;
+        font-size: $form-font-size-mobile;
+        width: calc(100% - $body-padding - 1rem);
     }
 }
