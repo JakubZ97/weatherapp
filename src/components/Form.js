@@ -2,6 +2,12 @@ import React from 'react'
 
 function Form({ API_KEY, setData, setStatusCode }) {
 
+  const handleClick = (event) => {
+    event.preventDefault()
+    const search = document.getElementById('search-city').value
+    downloadData(search)
+  }
+
   const downloadData = (city) => {
     console.log(API_KEY)
         fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}?unitGroup=us&key=${API_KEY}&contentType=json`)
@@ -20,14 +26,12 @@ function Form({ API_KEY, setData, setStatusCode }) {
 
   return (
     <form autoComplete='off'>
-        <input type='text' placeholder='Type city here' id='search-city'></input>
+        <input type='text' placeholder='Search' id='search-city'></input>
         <button 
           type='submit' 
-          onClick={(e) =>{
-            const search = document.getElementById('search-city').value
-            e.preventDefault()
-            downloadData(search)
-          }}>
+          aria-label='Search button'
+          onClick={(event) => { handleClick(event) }}
+        >
         </button>
     </form>
   )
