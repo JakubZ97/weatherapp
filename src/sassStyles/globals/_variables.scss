@@ -2,3 +2,7 @@ $body-padding: 1rem;
 
 $font-color: #FFFFFF;
 $form-font-size-mobile: 1.2rem;
+
+@mixin formBGColor ($opacity: 1) {
+    background-color: rgba(255, 255, 255, $opacity);
+}
