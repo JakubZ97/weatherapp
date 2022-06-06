@@ -9,7 +9,6 @@ function Form({ API_KEY, setData, setStatusCode, setToday }) {
   }
 
   const downloadData = (city) => {
-    console.log(API_KEY)
         fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}?unitGroup=us&key=${API_KEY}&contentType=json`)
     .then(response => {
       setStatusCode(response.ok);
@@ -18,7 +17,7 @@ function Form({ API_KEY, setData, setStatusCode, setToday }) {
     .then(json => {
       setToday(json.days.shift())
       setData(json.days)
-      console.log(json.days)
+      //console.log(json.days)
     })
     .catch(err => {
       console.error(err);
