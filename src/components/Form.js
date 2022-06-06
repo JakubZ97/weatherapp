@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Form({ API_KEY, setData, setStatusCode }) {
+function Form({ API_KEY, setData, setStatusCode, setToday }) {
 
   const handleClick = (event) => {
     event.preventDefault()
@@ -16,6 +16,7 @@ function Form({ API_KEY, setData, setStatusCode }) {
       return response.json();
     })
     .then(json => {
+      setToday(json.days.shift())
       setData(json.days)
       console.log(json.days)
     })

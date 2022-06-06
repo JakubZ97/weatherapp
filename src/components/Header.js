@@ -1,7 +1,7 @@
 import React from 'react'
 import Form from './Form'
 
-function Header({API_KEY, setData, setStatusCode, data }) {
+function Header({API_KEY, setData, setStatusCode, setToday }) {
   return (
     <header>
         <h1>
@@ -9,6 +9,7 @@ function Header({API_KEY, setData, setStatusCode, data }) {
         </h1>
         <Form
           API_KEY = { API_KEY }
+          setToday = { setToday }
           setData = { setData }
           setStatusCode = { setStatusCode }
         />
