@@ -1,9 +1,6 @@
 import './App.scss'
 import Header from './components/Header';
-import Section from './components/Section';
-import Today from './components/Today';
-import NextDay from './components/NextDay';
-import NextWeek from './components/NextWeek';
+import Main from './components/Main';
 import { useState } from 'react';
 
 function App() {
@@ -25,38 +22,11 @@ function App() {
         setStatusCode = { setStatusCode }
       />
       {today && 
-
-        <main>
-          <Section 
-            title={ 'Today' }
-            component = { 
-              <Today
-                today = { today }
-                fahrenheitToCelsius = { fahrenheitToCelsius }
-              />
-            }
-          />
-          <Section 
-            title = { 'Next 24 hours' }
-              component = { 
-              <NextDay
-                today = { today }
-                data = { data }
-                fahrenheitToCelsius = { fahrenheitToCelsius }
-              />
-            }
-          />
-          <Section
-            title={ 'Next Week' }
-            component = {
-              <NextWeek 
-                data = { data }
-                fahrenheitToCelsius = { fahrenheitToCelsius }
-              />
-            }
-          />
-        </main>
-      }
+      <Main
+        today = { today }
+        data = { data }
+        fahrenheitToCelsius = { fahrenheitToCelsius }
+      />}
     </div>
   );
 }
