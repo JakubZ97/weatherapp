@@ -2,6 +2,7 @@ import './App.scss'
 import Header from './components/Header';
 import Section from './components/Section';
 import Today from './components/Today';
+import NextDay from './components/NextDay';
 import { useState } from 'react';
 
 function App() {
@@ -30,6 +31,16 @@ function App() {
             component = { 
               <Today
                 today = { today }
+                fahrenheitToCelsius = { fahrenheitToCelsius }
+              />
+            }
+          />
+          <Section 
+            title = { 'Next 24 hours' }
+              component = { 
+              <NextDay
+                today = { today }
+                data = { data }
                 fahrenheitToCelsius = { fahrenheitToCelsius }
               />
             }
