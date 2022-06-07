@@ -5,9 +5,9 @@ function NextWeek({ data, fahrenheitToCelsius }) {
   return (
     <ol className='next-week'>
       {data.slice(0, 7).map(day => {
-        console.log(day)
 
         return <NextWeekLi
+          key = { day.datetimeEpoch } 
           day = { day }
           fahrenheitToCelsius = { fahrenheitToCelsius }
         />
