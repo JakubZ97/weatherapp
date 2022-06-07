@@ -15,11 +15,11 @@ function NextDay({ today, data, fahrenheitToCelsius }) {
 	}
 
   return (
-    <ol>
+    <ol className='next-day'>
 			{next().map(hour => {
 				return <NextDayLi key={hour.datetimeEpoch} hour={ hour } fahrenheitToCelsius = { fahrenheitToCelsius }/>
 			})}
-		</ol>
+	  </ol>
   )
 }
 
