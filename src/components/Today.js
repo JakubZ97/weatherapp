@@ -19,11 +19,11 @@ function Today({ today, fahrenheitToCelsius }) {
         />
         <p>
           <span className='day'>
-            { fahrenheitToCelsius(today.tempmax) }° 
+            { fahrenheitToCelsius(today.tempmax) }&deg; 
           </span>
           /
           <span className='night'>
-            { fahrenheitToCelsius(today.tempmin) }°
+            { fahrenheitToCelsius(today.tempmin) }&deg;
           </span>
         </p>
         <p>
