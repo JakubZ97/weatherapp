@@ -11,7 +11,7 @@ function NextDayLi({ hour, fahrenheitToCelsius }) {
         alt={hour.icon.split('-').join(' ')}
       />
 	    <p>
-	    	{ fahrenheitToCelsius(hour.temp) }
+	    	{ fahrenheitToCelsius(hour.temp) }&deg;
 	    </p> 
     </li>
   )
