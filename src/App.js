@@ -22,19 +22,20 @@ function App() {
         setData = { setData }
         setStatusCode = { setStatusCode }
       />
-      <>
-        {today &&
-        <Section 
-          title={ 'Now' }
-          component={ 
-            <Today
-              today = { today }
-              fahrenheitToCelsius = { fahrenheitToCelsius }
-            />
-          }
-        />
-        }
-      </>
+      {today && 
+
+        <main>
+          <Section 
+            title={ 'Today' }
+            component = { 
+              <Today
+                today = { today }
+                fahrenheitToCelsius = { fahrenheitToCelsius }
+              />
+            }
+          />
+        </main>
+      }
     </div>
   );
 }
