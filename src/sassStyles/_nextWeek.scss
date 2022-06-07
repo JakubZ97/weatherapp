@@ -1,0 +1,27 @@
+@import 'globals/variables';
+
+.next-week {
+    margin-top: 1rem;
+
+    li {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+
+        &:not(:first-child) {
+            margin-top: .2rem;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: .2rem;
+            border-bottom: solid rgba(255, 255, 255, .3) 1px;
+        }
+
+        img {
+            height: 1rem;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%);
+        }
+    }
+}

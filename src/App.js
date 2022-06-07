@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Section from './components/Section';
 import Today from './components/Today';
 import NextDay from './components/NextDay';
+import NextWeek from './components/NextWeek';
 import { useState } from 'react';
 
 function App() {
@@ -40,6 +41,15 @@ function App() {
               component = { 
               <NextDay
                 today = { today }
+                data = { data }
+                fahrenheitToCelsius = { fahrenheitToCelsius }
+              />
+            }
+          />
+          <Section
+            title={ 'Next Week' }
+            component = {
+              <NextWeek 
                 data = { data }
                 fahrenheitToCelsius = { fahrenheitToCelsius }
               />
