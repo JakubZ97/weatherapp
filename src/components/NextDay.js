@@ -10,7 +10,6 @@ function NextDay({ today, data, fahrenheitToCelsius }) {
 		let arr = today.hours.slice(currentHour + 1, -1)
 		arr = arr.concat(data[0].hours.slice(0, 24 - arr.length))
 
-		console.log(arr)
 		return arr
 	}
 
