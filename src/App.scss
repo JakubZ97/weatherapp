@@ -1,15 +1,8 @@
 @use 'sassStyles/globals/reset';
+@use 'sassStyles/globals/global';
 @use 'sassStyles/header';
 @use 'sassStyles/form';
 @use 'sassStyles/section';
 @use 'sassStyles/today';
+@use 'sassStyles/next24';
 @import 'sassStyles/globals/variables';
-
-body {
-    padding: $body-padding;
-    height: 100%;
-    background-attachment: fixed;
-    background: linear-gradient(#1C9CF6, #19C3FB);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
