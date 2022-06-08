@@ -3,7 +3,7 @@ import React from 'react'
 function Today({ today, fahrenheitToCelsius }) {
 
   const getIcon = () => {
-    const currentDate = new Date
+    const currentDate = new Date()
     return today.hours[currentDate.getHours()].icon
   }
 
@@ -14,7 +14,7 @@ function Today({ today, fahrenheitToCelsius }) {
   return (
     <div className='container today'>
         <img
-            src={`/assets/weatherIcons/${getIcon()}.svg`}
+            src={require(`../assets/weatherIcons/${getIcon()}.svg`)}
             alt={today.description}
         />
         <p>

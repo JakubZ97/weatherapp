@@ -15,7 +15,7 @@ function NextWeekLi({ day, fahrenheitToCelsius }) {
         {days[getDayNumber()]}
       </p>
       <img
-        src={`/assets/weatherIcons/${day.icon}.svg`}
+        src={require(`../assets/weatherIcons/${day.icon}.svg`)}
         alt={day.icon.split('-').join(' ')}
       />
       <p>

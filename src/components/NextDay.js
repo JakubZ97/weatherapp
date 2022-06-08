@@ -4,7 +4,7 @@ import NextDayLi from './NextDayLi'
 function NextDay({ today, data, fahrenheitToCelsius }) {
 
 	const next = () => {
-		const date = new Date 
+		const date = new Date()
 		const currentHour = date.getHours()
 
 		let arr = today.hours.slice(currentHour + 1, -1)
@@ -14,11 +14,11 @@ function NextDay({ today, data, fahrenheitToCelsius }) {
 	}
 
 	const renderEveryTwoHour = (hour) => {
-		const now = new Date
+		const now = new Date()
 		const nowHour = Number(now.getHours())
 		hour = Number(hour.datetime.split(':')[0])
 
-		return (nowHour + hour) % 2 == 0
+		return (nowHour + hour) % 2 === 0
 	}
 
   return (

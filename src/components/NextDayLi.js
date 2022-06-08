@@ -7,7 +7,7 @@ function NextDayLi({ hour, fahrenheitToCelsius }) {
         {hour.datetime.split('').slice(0, 5).join('')}
       </p>
 	    <img 
-        src={`/assets/weatherIcons/${hour.icon}.svg`}
+        src={require(`../assets/weatherIcons/${hour.icon}.svg`)}
         alt={hour.icon.split('-').join(' ')}
       />
 	    <p>
