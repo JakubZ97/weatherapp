@@ -8,6 +8,7 @@ function Main({ today, data, fahrenheitToCelsius }) {
   return (
     <main>
     <Section 
+      id={ 'today-section' }
       title={ 'Today' }
       component = { 
         <Today
@@ -17,6 +18,7 @@ function Main({ today, data, fahrenheitToCelsius }) {
       }
     />
     <Section 
+      id={ 'next24-section' }
       title = { 'Next 24 hours' }
         component = { 
         <NextDay
@@ -27,6 +29,7 @@ function Main({ today, data, fahrenheitToCelsius }) {
       }
     />
     <Section
+      id={'next-week-section'}
       title={ 'Next Week' }
       component = {
         <NextWeek 

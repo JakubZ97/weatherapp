@@ -1,8 +1,8 @@
 import React from 'react'
 
-function Section({ title, component }) {
+function Section({ id, title, component }) {
   return (
-    <section>
+    <section id={id}>
         <h2>{ title }</h2>
         { component }
     </section>
