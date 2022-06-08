@@ -13,10 +13,20 @@ function NextDay({ today, data, fahrenheitToCelsius }) {
 		return arr
 	}
 
+	const renderEveryTwoHour = (hour) => {
+		const now = new Date
+		const nowHour = Number(now.getHours())
+		hour = Number(hour.datetime.split(':')[0])
+
+		return (nowHour + hour) % 2 == 0
+	}
+
   return (
     <ol className='next-day'>
 			{next().map(hour => {
-				return <NextDayLi key={hour.datetimeEpoch} hour={ hour } fahrenheitToCelsius = { fahrenheitToCelsius }/>
+				if (renderEveryTwoHour(hour)){
+					return <NextDayLi key={hour.datetimeEpoch} hour={ hour } fahrenheitToCelsius = { fahrenheitToCelsius }/>
+				}
 			})}
 	  </ol>
   )
