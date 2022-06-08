@@ -16,21 +16,25 @@ form {
         background-repeat: no-repeat;
         right: 0;
 
-        @include formBGColor(1)
-    }
+        @include formBGColor(1);
 
-    input {
-        all: unset;
-        position: relative;
-        height: calc($form-font-size-mobile + .5rem);
-        width: calc(100% - $form-font-size-mobile - 2.5rem);
-        left: 0;
-        height: $form-font-size-mobile;
-        line-height: $form-font-size-mobile;
-        font-size: $form-font-size-mobile;
-        color: black;
-        padding: .25rem;
-
-        @include formBGColor(.8)
+        &:hover {
+            @include formBGColor(.8)
+        }
     }
+}
+
+input {
+    all: unset;
+    position: relative;
+    height: calc($form-font-size-mobile + .5rem);
+    width: calc(100% - $form-font-size-mobile - 2.5rem);
+    left: 0;
+    height: $form-font-size-mobile;
+    line-height: $form-font-size-mobile;
+    font-size: $form-font-size-mobile;
+    color: black;
+    padding: .25rem;
+
+    @include formBGColor(.8)
 }

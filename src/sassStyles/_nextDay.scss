@@ -1,8 +1,12 @@
+@import 'globals/variables';
+
 .next-day {
     margin-top: 1rem;
+    width: 100%;
     display: flex;
+    justify-content: space-between;
     overflow-y: hidden;
-    overflow-x: scroll;
+    overflow-x: auto;
 
     li {
         display: flex;
@@ -21,5 +25,27 @@
 
     img {
         height: 1rem;
+    }
+}
+
+@media screen and (min-width: $tablet-screen) {
+    .next-day {
+        flex-direction: column;
+        overflow: auto;
+
+        li {
+            flex-direction: row;
+
+            p {
+                font-size: 1rem;
+                padding: 0;
+            }
+
+            &:not(:last-child) {
+                margin-right: 0;
+            }
+        }
+
+        @include verticalWeatherList
     }
 }

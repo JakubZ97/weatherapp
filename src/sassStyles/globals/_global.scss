@@ -1,11 +1,33 @@
+@import './variables';
+
 body {
     min-height: 100vh;
     background-attachment: fixed;
     background: linear-gradient(#1C9CF6, #19C3FB);
     background-repeat: no-repeat;
     background-size: cover;
+    padding: 1rem;
 }
 
-.App {
-    padding: 1rem;
+
+@media screen and (min-width: $tablet-screen) {
+
+    #root,
+    .App {
+        max-width: 1024px;
+        width: 100%;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+    }
+
+    main {
+        display: grid;
+        column-gap: 1rem;
+        width: 100%;
+        grid-template-columns: calc(50% - .5rem) calc(50% - .5rem);
+        grid-template-rows: 1fr 1fr;
+    }
 }
